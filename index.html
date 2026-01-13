@@ -50,7 +50,7 @@
     <meta name="twitter:image" content="qr.png">
     
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://custard-landing-page.vercel.app/">
+    <link rel="canonical" href="https://joincustard.co.uk">
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>◆</text></svg>">
@@ -72,7 +72,6 @@
                 <a href="#how-it-works" class="nav-link">How It Works</a>
                 <a href="#features" class="nav-link">Features</a>
                 <a href="#reviews" class="nav-link">Reviews</a>
-                <a href="#screenshots" class="nav-link">See It In Action</a>
             </nav>
             <a href="https://joincustard.co.uk/account/register?referral=2638bb71-4f37-4a54-a7b3-61e5b221c7fe&utm_source=referral&utm_medium=affiliate" class="btn btn-primary header-cta" target="_blank" rel="noopener noreferrer">Get Started</a>
         </div>
@@ -368,16 +367,9 @@
                     <p class="footer-description">The fastest-paying rewards platform in the UK. Earn money by playing games, taking surveys, and shopping.</p>
                 </div>
                 <div class="footer-links">
-                    <h4>Quick Links</h4>
-                    <a href="#how-it-works">How It Works</a>
-                    <a href="#features">Features</a>
-                    <a href="#reviews">Reviews</a>
-                    <a href="#screenshots">See It In Action</a>
-                </div>
-                <div class="footer-links">
                     <h4>Legal</h4>
-                    <a href="https://joincustard.co.uk/terms" target="_blank" rel="noopener noreferrer">Terms & Conditions</a>
-                    <a href="https://joincustard.co.uk/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+                    <a href="#" class="legal-link" data-modal="terms">Terms & Conditions</a>
+                    <a href="#" class="legal-link" data-modal="privacy">Privacy Info</a>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -396,6 +388,88 @@
         </div>
         <button class="lightbox-nav lightbox-prev" aria-label="Previous">&#10094;</button>
         <button class="lightbox-nav lightbox-next" aria-label="Next">&#10095;</button>
+    </div>
+
+    <!-- Legal Modal -->
+    <div id="legal-modal" class="legal-modal">
+        <div class="legal-modal-overlay"></div>
+        <div class="legal-modal-content">
+            <button class="legal-modal-close" aria-label="Close">&times;</button>
+            <div id="legal-modal-body"></div>
+        </div>
+    </div>
+
+    <!-- Legal Modal Templates -->
+    <div id="legal-templates" style="display: none;">
+        <!-- Terms Template -->
+        <div id="terms-content">
+            <h2>Terms & Conditions</h2>
+            <div class="legal-section">
+                <h3>About This Page</h3>
+                <p>This is an independent landing page promoting <strong>Custard</strong> (joincustard.co.uk). We are not affiliated with, endorsed by, or connected to Custard or its parent company in any way.</p>
+            </div>
+            <div class="legal-section">
+                <h3>Affiliate Disclosure</h3>
+                <p>This page contains affiliate links. If you sign up through our referral link, we may earn a commission at no additional cost to you. This helps support our work and allows us to continue providing valuable content.</p>
+            </div>
+            <div class="legal-section">
+                <h3>Custard Terms Summary</h3>
+                <p>By using Custard, you agree to their terms of service. Key points include:</p>
+                <ul>
+                    <li>You must be a UK resident aged 18 or over</li>
+                    <li>One account per person - duplicate accounts will be closed</li>
+                    <li>You must complete offers honestly - fraudulent activity is prohibited</li>
+                    <li>Payouts are processed within 48 hours via Rapid Pay</li>
+                    <li>Minimum payout threshold is £10</li>
+                    <li>Custard reserves the right to modify offers and terms at any time</li>
+                </ul>
+            </div>
+            <div class="legal-section">
+                <h3>Earning Disclaimer</h3>
+                <p>Individual earnings on Custard vary significantly based on factors including:</p>
+                <ul>
+                    <li>Location and demographic profile</li>
+                    <li>Available offers in your area</li>
+                    <li>Time and effort invested</li>
+                    <li>Offer completion requirements</li>
+                </ul>
+                <p>We do not guarantee any specific earnings. Past performance does not indicate future results.</p>
+            </div>
+            <div class="legal-section">
+                <h3>Limitation of Liability</h3>
+                <p>This landing page provides information for promotional purposes only. We are not responsible for your use of Custard or any outcomes from signing up through our referral link.</p>
+            </div>
+            <div class="legal-section">
+                <p class="legal-note">For full Custard terms, please visit: <a href="https://joincustard.co.uk/terms" target="_blank" rel=\"noopener noreferrer\">joincustard.co.uk/terms</a></p>
+            </div>
+        </div>
+        <!-- Privacy Template -->
+        <div id="privacy-content">
+            <h2>Privacy Information</h2>
+            <div class="legal-section">
+                <h3>What We Collect</h3>
+                <p><strong>This landing page does NOT collect, store, or process any personal information.</strong></p>
+                <p>We do not use cookies, tracking pixels, or analytics that identify individual visitors.</p>
+            </div>
+            <div class="legal-section">
+                <h3>Third-Party Services</h3>
+                <p>This page is hosted on Vercel. Vercel may collect basic technical information (IP address, browser type) for hosting purposes only. This data is not shared with us and is not used for tracking or advertising.</p>
+            </div>
+            <div class="legal-section">
+                <h3>Your Data on Custard</h3>
+                <p>When you click through to Custard, you will be subject to their privacy policy. Custard collects information necessary to provide their service, including:</p>
+                <ul>
+                    <li>Account registration details</li>
+                    <li>Payment information for withdrawals</li>
+                    <li>Activity data related to offers completed</li>
+                </ul>
+                <p>For Custard's full privacy policy, please visit: <a href="https://joincustard.co.uk/privacy" target="_blank" rel=\"noopener noreferrer\">joincustard.co.uk/privacy</a></p>
+            </div>
+            <div class="legal-section">
+                <h3>Contact</h3>
+                <p>If you have any questions about this privacy information, please note that we cannot be contacted through this landing page as we do not collect any personal data.</p>
+            </div>
+        </div>
     </div>
 
     <script src="script.js"></script>
