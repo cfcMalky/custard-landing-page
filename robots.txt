@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://custard-landing-page.vercel.app/sitemap.xml
