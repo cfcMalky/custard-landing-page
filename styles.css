@@ -805,6 +805,160 @@ img {
 }
 
 /* ========================================
+   UK Notice Banner
+   ======================================== */
+
+.uk-notice {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background-color: rgba(5, 150, 105, 0.1);
+    border: 1px solid rgba(5, 150, 105, 0.3);
+    border-radius: var(--border-radius-md);
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--accent-green);
+    margin-bottom: 20px;
+}
+
+.uk-notice-icon {
+    font-size: 18px;
+}
+
+/* ========================================
+   Secondary CTA
+   ======================================== */
+
+.hero-secondary-cta {
+    display: inline-block;
+    margin-top: 16px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--accent-green);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color var(--transition-fast);
+}
+
+.hero-secondary-cta:hover {
+    color: var(--accent-green-dark);
+}
+
+/* ========================================
+   Comparison Section
+   ======================================== */
+
+.comparison {
+    padding: 100px 0;
+    background-color: var(--bg-white);
+}
+
+.comparison-table-wrapper {
+    overflow-x: auto;
+    margin-bottom: 24px;
+}
+
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--bg-white);
+    border-radius: var(--border-radius-xl);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+}
+
+.comparison-table th,
+.comparison-table td {
+    padding: 20px 24px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.comparison-table th {
+    background-color: var(--dark-slate);
+    color: var(--bg-white);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.comparison-table th.highlight-col {
+    background-color: var(--accent-green);
+}
+
+.comparison-table td {
+    font-size: 15px;
+    color: var(--text-medium);
+}
+
+.comparison-table td.highlight-col {
+    background-color: rgba(5, 150, 105, 0.05);
+    color: var(--text-dark);
+    font-weight: 500;
+}
+
+.comparison-table tr:last-child td {
+    border-bottom: none;
+}
+
+.comparison-table tbody tr:hover {
+    background-color: var(--bg-warm);
+}
+
+.comparison-note {
+    text-align: center;
+    font-size: 13px;
+    color: var(--text-light);
+    font-style: italic;
+}
+
+/* ========================================
+   FAQ Section
+   ======================================== */
+
+.faq {
+    padding: 100px 0;
+    background-color: var(--bg-warm);
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background-color: var(--bg-white);
+    padding: 28px;
+    border-radius: var(--border-radius-xl);
+    border: 1px solid var(--border-light);
+    transition: all var(--transition-normal);
+}
+
+.faq-item:hover {
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-yellow);
+}
+
+.faq-question {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: var(--dark-slate);
+}
+
+.faq-answer {
+    font-size: 15px;
+    color: var(--text-medium);
+    line-height: 1.6;
+}
+
+/* ========================================
    Footer
    ======================================== */
 
@@ -901,19 +1055,47 @@ img {
     }
 
     .hero {
-        padding: 120px 0 60px;
+        padding: 100px 0 50px;
     }
 
     .hero-title {
-        font-size: 36px;
+        font-size: 32px;
+        margin-bottom: 16px;
+    }
+
+    .uk-notice {
+        font-size: 13px;
+        padding: 6px 12px;
     }
 
     .hero-subtitle {
-        font-size: 17px;
+        font-size: 16px;
+        margin-bottom: 24px;
+    }
+
+    .hero-note {
+        font-size: 13px;
+    }
+
+    .hero-secondary-cta {
+        font-size: 13px;
+    }
+
+    .bonus-badge {
+        padding: 10px 16px;
+        font-size: 14px;
+    }
+
+    .bonus-text strong {
+        font-size: 18px;
     }
 
     .section-title {
-        font-size: 32px;
+        font-size: 28px;
+    }
+
+    .section-subtitle {
+        font-size: 16px;
     }
 
     .steps-grid {
@@ -940,18 +1122,40 @@ img {
         gap: 16px;
     }
 
+    .trust-badge {
+        font-size: 13px;
+    }
+
     .footer-content {
         grid-template-columns: 1fr;
         gap: 40px;
     }
 
     .stat-number {
-        font-size: 36px;
+        font-size: 32px;
     }
 
     .qr-image {
         width: 80px;
         height: 80px;
+    }
+
+    .comparison-table th,
+    .comparison-table td {
+        padding: 12px;
+        font-size: 13px;
+    }
+
+    .faq-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .faq-question {
+        font-size: 16px;
+    }
+
+    .faq-answer {
+        font-size: 14px;
     }
 }
 
@@ -960,25 +1164,41 @@ img {
         padding: 0 16px;
     }
 
+    .hero {
+        padding: 90px 0 40px;
+    }
+
     .hero-title {
-        font-size: 28px;
-    }
-
-    .btn-large {
-        padding: 14px 24px;
-        font-size: 16px;
-    }
-
-    .section-title {
         font-size: 26px;
     }
 
+    .hero-subtitle {
+        font-size: 15px;
+    }
+
+    .btn-large {
+        padding: 14px 20px;
+        font-size: 15px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero-cta-group {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section-title {
+        font-size: 24px;
+    }
+
     .stat-number {
-        font-size: 28px;
+        font-size: 26px;
     }
 
     .cta-title {
-        font-size: 28px;
+        font-size: 24px;
     }
 
     .qr-section {
@@ -988,6 +1208,14 @@ img {
     .qr-image {
         width: 70px;
         height: 70px;
+    }
+
+    .faq {
+        padding: 60px 0;
+    }
+
+    .comparison {
+        padding: 60px 0;
     }
 }
 
