@@ -94,634 +94,236 @@
     </script>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>◆</text></svg>">
+    <link rel="icon" type="image/svg+xml" href="https://cdn.joincustard.co.uk/static/logo/logo.svg">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            color: #333;
-            line-height: 1.6;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Header Styles */
-        .header {
-            background: white;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 0;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 24px;
-            font-weight: 700;
-            color: #ffc000;
-        }
-
-        .logo-icon {
-            font-size: 28px;
-        }
-
-        .nav {
-            display: flex;
-            gap: 30px;
-            text-align: center;
-        }
-
-        .nav-link {
-            text-decoration: none;
-            color: #666;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-
-        .nav-link:hover {
-            color: #ffc000;
-        }
-
-        .btn {
-            padding: 12px 24px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-            text-align: center;
-            display: inline-block;
-        }
-
-        .btn-primary {
-            background: linear-gradient(135deg, #ffc000 0%, #ff9800 100%);
-            color: white;
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 16px rgba(255, 192, 0, 0.3);
-        }
-
-        .btn-large {
-            padding: 16px 40px;
-            font-size: 16px;
-        }
-
-        /* Hero Section */
-        .hero {
-            padding: 80px 20px;
-            text-align: center;
-            background: linear-gradient(135deg, #ffffff 0%, #f0f4f8 100%);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 30px;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .bonus-badge {
-            background: linear-gradient(135deg, #ffc000 0%, #ff9800 100%);
-            color: white;
-            padding: 12px 24px;
-            border-radius: 50px;
-            font-weight: 600;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            box-shadow: 0 4px 12px rgba(255, 192, 0, 0.3);
-        }
-
-        .hero-badge {
-            background: #e8f5e9;
-            color: #2e7d32;
-            padding: 12px 20px;
-            border-radius: 8px;
-            font-weight: 600;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .hero-title {
-            font-family: 'Poppins', sans-serif;
-            font-size: 48px;
-            font-weight: 800;
-            color: #1a1a1a;
-            margin: 20px 0;
-            line-height: 1.2;
-        }
-
-        .hero-subtitle {
-            font-size: 18px;
-            color: #666;
-            max-width: 600px;
-            margin: 20px auto;
-        }
-
-        .uk-notice {
-            background: #f3e5f5;
-            color: #6a1b9a;
-            padding: 12px 24px;
-            border-radius: 8px;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            font-weight: 600;
-        }
-
-        .hero-cta-group {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            align-items: center;
-        }
-
-        .btn-arrow {
-            margin-left: 8px;
-        }
-
-        .hero-note {
-            font-size: 14px;
-            color: #888;
-            margin-top: 10px;
-        }
-
-        .hero-secondary-cta {
-            color: #ffc000;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            border-bottom: 2px solid #ffc000;
-            padding-bottom: 2px;
-        }
-
-        .hero-secondary-cta:hover {
-            color: #ff9800;
-            border-bottom-color: #ff9800;
-        }
-
-        .qr-section {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 15px;
-            background: white;
-            padding: 20px;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        }
-
-        .qr-image {
-            width: 150px;
-            height: 150px;
-            border-radius: 8px;
-        }
-
-        .qr-text {
-            font-weight: 600;
-            color: #333;
-        }
-
-        .trust-badges {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .trust-badge {
-            background: white;
-            padding: 12px 20px;
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-            font-weight: 600;
-            color: #333;
-        }
-
-        /* Sections Container Styling */
-        .section-container {
-            background: white;
-            border-radius: 16px;
-            padding: 60px 40px;
-            margin: 40px auto;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-            max-width: 1100px;
-            border-top: 5px solid #ffc000;
-        }
-
-        .how-it-works {
-            padding: 60px 20px;
-        }
-
-        .features {
-            padding: 60px 20px;
-        }
-
-        .faq {
-            padding: 60px 20px;
-        }
-
-        .testimonials {
-            padding: 60px 20px;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-
-        .section-title {
-            font-family: 'Poppins', sans-serif;
-            font-size: 40px;
-            font-weight: 800;
-            color: #1a1a1a;
-            margin-bottom: 15px;
-        }
-
-        .section-subtitle {
-            font-size: 16px;
-            color: #888;
-        }
-
-        /* Steps Grid */
-        .steps-grid {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
-            align-items: flex-start;
-        }
-
-        .step-card {
-            background: linear-gradient(135deg, #ffffff 0%, #f9f9f9 100%);
-            border: 2px solid #f0f0f0;
-            border-radius: 12px;
-            padding: 30px;
-            text-align: center;
-            flex: 1;
-            min-width: 250px;
-            max-width: 300px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-        }
-
-        .step-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
-            border-color: #ffc000;
-        }
-
-        .step-number {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 50px;
-            height: 50px;
-            background: linear-gradient(135deg, #ffc000 0%, #ff9800 100%);
-            color: white;
-            border-radius: 50%;
-            font-weight: 700;
-            font-size: 24px;
-            margin-bottom: 15px;
-        }
-
-        .step-icon-wrapper {
-            font-size: 48px;
-            margin: 15px 0;
-        }
-
-        .step-title {
-            font-family: 'Poppins', sans-serif;
-            font-size: 20px;
-            font-weight: 700;
-            color: #1a1a1a;
-            margin: 15px 0;
-        }
-
-        .step-description {
-            font-size: 14px;
-            color: #666;
-            line-height: 1.6;
-        }
-
-        .step-connector {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #ffc000;
-            font-size: 24px;
-            font-weight: 700;
-        }
-
-        /* Features Grid */
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            margin-top: 40px;
-        }
-
-        .feature-card {
-            background: white;
-            border: 2px solid #f0f0f0;
-            border-radius: 12px;
-            padding: 30px;
-            text-align: center;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-        }
-
-        .feature-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
-            border-color: #ffc000;
-        }
-
-        .highlight-card {
-            background: linear-gradient(135deg, #ffc000 0%, #ff9800 100%);
-            color: white;
-            border-color: #ff9800;
-        }
-
-        .highlight-card:hover {
-            border-color: #ff8500;
-        }
-
-        .feature-icon-wrapper {
-            font-size: 48px;
-            margin-bottom: 15px;
-        }
-
-        .feature-title {
-            font-family: 'Poppins', sans-serif;
-            font-size: 18px;
-            font-weight: 700;
-            margin: 15px 0;
-        }
-
-        .feature-description {
-            font-size: 14px;
-            line-height: 1.6;
-        }
-
-        .highlight-card .feature-description {
-            color: rgba(255, 255, 255, 0.95);
-        }
-
-        /* FAQ Section */
-        .faq-items {
-            display: grid;
-            gap: 20px;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .faq-item {
-            background: white;
-            border-left: 5px solid #ffc000;
-            border-radius: 8px;
-            padding: 25px;
-            transition: all 0.3s ease;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-        }
-
-        .faq-item:hover {
-            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
-        }
-
-        .faq-question {
-            font-family: 'Poppins', sans-serif;
-            font-size: 16px;
-            font-weight: 700;
-            color: #1a1a1a;
-            margin-bottom: 10px;
-            cursor: pointer;
-        }
-
-        .faq-answer {
-            font-size: 14px;
-            color: #666;
-            line-height: 1.8;
-        }
-
-        /* Testimonials Grid */
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            margin-top: 40px;
-        }
-
-        .testimonial-card {
-            background: white;
-            border-radius: 12px;
-            padding: 25px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
-        }
-
-        .testimonial-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
-            border-color: #ffc000;
-        }
-
-        .testimonial-rating {
-            color: #ffc000;
-            font-size: 16px;
-            margin-bottom: 15px;
-        }
-
-        .testimonial-text {
-            font-size: 14px;
-            color: #666;
-            line-height: 1.8;
-            font-style: italic;
-            margin: 15px 0;
-        }
-
-        .testimonial-author {
-            display: flex;
-            flex-direction: column;
-            gap: 5px;
-            margin-top: 15px;
-        }
-
-        .author-name {
-            font-weight: 600;
-            color: #1a1a1a;
-            font-size: 14px;
-        }
-
-        .author-badge {
-            background: #e8f5e9;
-            color: #2e7d32;
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: 600;
-            width: fit-content;
-        }
-
+        :root {
+            --primary: #FCE300;
+            --primary-dark: #d4b800;
+            --secondary: #FCE300;
+            --dark: #231F20;
+            --light: #fdfcf5;
+            --gray: #5a5657;
+            --white: #ffffff;
+            --accent: #FCE300;
+            --gradient-start: #231F20;
+            --gradient-end: #3d393a;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Montserrat', sans-serif; line-height: 1.7; color: var(--dark); background: var(--light); font-size: 16px; font-weight: 400; letter-spacing: 0; }
+        .container { max-width: 1180px; margin: 0 auto; padding: 0 24px; }
+        
+        /* Typography */
+        h1, h2, h3, h4 { font-family: 'Montserrat', sans-serif; font-weight: 700; line-height: 1.2; }
+        .section-title, .cta-title, .nav-link { text-transform: lowercase; }
+        
+        /* Buttons */
+        .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 14px 28px; border-radius: 50px; font-weight: 600; text-decoration: none; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: none; cursor: pointer; font-size: 16px; }
+        .btn-primary { background: var(--primary); color: var(--dark); font-weight: 700; box-shadow: 0 4px 14px rgba(252, 227, 0, 0.4); }
+        .btn-primary:hover { background: var(--primary-dark); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(252, 227, 0, 0.5); }
+        .btn-large { padding: 18px 36px; font-size: 18px; }
+        .btn-arrow { transition: transform 0.3s; }
+        .btn:hover .btn-arrow { transform: translateX(5px); }
+        
+        /* Header */
+        .header { background: rgba(255,255,255,0.95); backdrop-filter: blur(20px); box-shadow: 0 1px 0 rgba(0,0,0,0.05); position: fixed; top: 0; left: 0; right: 0; z-index: 1000; }
+        .header-content { display: flex; align-items: center; justify-content: space-between; padding: 14px 24px; max-width: 1180px; margin: 0 auto; }
+        .logo { display: flex; align-items: center; }
+        .logo-img { height: 32px; width: auto; }
+        .logo-icon { font-size: 30px; }
+        .nav { display: flex; align-items: center; gap: 36px; }
+        .nav-link { color: var(--dark); text-decoration: none; font-weight: 500; font-size: 15px; transition: color 0.2s; position: relative; }
+        .nav-link::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px; background: var(--primary); transition: width 0.3s; }
+        .nav-link:hover { color: var(--primary); }
+        .nav-link:hover::after { width: 100%; }
+        .header-cta { padding: 10px 20px; font-size: 14px; }
+        
+        /* Hero */
+        .hero { background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 50%, #0f172a 100%); color: var(--white); padding: 160px 0 100px; position: relative; overflow: hidden; }
+        .hero::before { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle, rgba(14, 165, 233, 0.15) 0%, transparent 50%); animation: rotate 20s linear infinite; }
+        .hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 100px; background: linear-gradient(to top, var(--light), transparent); }
+        @keyframes rotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+        .hero-content { position: relative; z-index: 2; text-align: center; max-width: 800px; margin: 0 auto; }
+        .bonus-badge { display: inline-flex; align-items: center; gap: 10px; background: var(--primary); color: var(--dark); padding: 10px 20px; border-radius: 50px; font-weight: 700; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(252, 227, 0, 0.4); animation: pulse 2s ease-in-out infinite; }
+        @keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.02); } }
+        .hero-badge { display: inline-flex; align-items: center; gap: 10px; background: rgba(14, 165, 233, 0.2); border: 1px solid rgba(14, 165, 233, 0.3); backdrop-filter: blur(10px); padding: 12px 24px; border-radius: 50px; margin-bottom: 28px; font-weight: 500; }
+        .hero-title { font-size: 56px; font-weight: 800; margin-bottom: 20px; letter-spacing: -0.02em; background: linear-gradient(135deg, #fff 0%, #e0f2fe 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .hero-subtitle { font-size: 20px; opacity: 0.9; max-width: 600px; margin: 0 auto 36px; line-height: 1.8; }
+        .hero-cta-group { display: flex; flex-direction: column; align-items: center; gap: 18px; }
+        .hero-note { font-size: 14px; opacity: 0.85; }
+        .bonus-highlight { color: var(--primary); font-weight: 700; }
+        .hero-secondary-cta { color: var(--white); font-weight: 500; text-decoration: underline; opacity: 0.85; transition: opacity 0.3s; }
+        .hero-secondary-cta:hover { opacity: 1; }
+        .uk-notice { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); padding: 10px 18px; border-radius: 50px; font-size: 14px; margin-bottom: 24px; }
+        
+        /* QR & Trust */
+        .qr-section { margin-top: 48px; }
+        .qr-image { width: 180px; height: 180px; border-radius: 20px; background: var(--white); padding: 12px; box-shadow: 0 10px 40px rgba(0,0,0,0.3); }
+        .qr-text { margin-top: 14px; font-weight: 600; font-size: 15px; }
+        .trust-badges { display: flex; justify-content: center; gap: 24px; margin-top: 40px; flex-wrap: wrap; }
+        .trust-badge { display: flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.15); padding: 12px 20px; border-radius: 12px; font-size: 14px; }
+        .trust-icon { font-size: 18px; }
+        
+        /* Floating Cards */
+        .hero-decoration { position: absolute; top: 0; left: 0; right: 0; bottom: 0; pointer-events: none; overflow: hidden; }
+        .floating-card { position: absolute; background: var(--white); padding: 14px 22px; border-radius: 16px; box-shadow: 0 10px 40px rgba(0,0,0,0.2); display: flex; align-items: center; gap: 10px; animation: float 4s ease-in-out infinite; }
+        .card-1 { top: 25%; left: 8%; animation-delay: 0s; }
+        .card-2 { top: 55%; right: 10%; animation-delay: 1.5s; }
+        .card-3 { bottom: 25%; left: 15%; animation-delay: 3s; }
+        .card-emoji { font-size: 26px; }
+        .card-text { font-weight: 700; color: var(--primary); font-size: 15px; }
+        @keyframes float { 0%, 100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-15px) rotate(2deg); } }
+        
+        /* Sections */
+        .how-it-works, .features, .screenshots, .stats, .cta, .comparison, .faq, .testimonials { padding: 100px 0; }
+        .section-header { text-align: center; margin-bottom: 60px; }
+        .section-title { font-size: 42px; font-weight: 800; margin-bottom: 14px; color: var(--dark); letter-spacing: -0.02em; }
+        .section-subtitle { font-size: 18px; color: var(--gray); max-width: 500px; margin: 0 auto; }
+        
+        /* Steps */
+        .steps-grid { display: flex; align-items: flex-start; justify-content: center; gap: 8px; flex-wrap: wrap; }
+        .step-card { background: var(--white); padding: 36px; border-radius: 24px; text-align: center; max-width: 300px; box-shadow: 0 4px 24px rgba(0,0,0,0.06); border: 1px solid rgba(0,0,0,0.04); transition: all 0.3s; }
+        .step-card:hover { transform: translateY(-8px); box-shadow: 0 12px 40px rgba(0,0,0,0.1); }
+        .step-number { background: var(--primary); color: var(--dark); width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; margin: 0 auto 20px; font-size: 16px; }
+        .step-icon-wrapper { font-size: 52px; margin-bottom: 18px; }
+        .step-title { font-size: 22px; font-weight: 700; margin-bottom: 10px; color: var(--dark); }
+        .step-description { color: var(--gray); font-size: 15px; line-height: 1.7; }
+        .step-connector { display: flex; align-items: center; padding: 0 12px; margin-top: 40px; }
+        .connector-line { width: 50px; height: 3px; background: var(--primary); border-radius: 2px; }
+        .connector-arrow { color: var(--primary); font-size: 22px; margin-left: 8px; }
+        
+        /* Features */
+        .features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+        .feature-card { background: var(--white); padding: 32px; border-radius: 24px; box-shadow: 0 4px 24px rgba(0,0,0,0.05); border: 1px solid rgba(0,0,0,0.04); transition: all 0.3s; position: relative; overflow: hidden; }
+        .feature-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: var(--primary); opacity: 0; transition: opacity 0.3s; }
+        .feature-card:hover { transform: translateY(-6px); box-shadow: 0 12px 40px rgba(0,0,0,0.1); }
+        .feature-card:hover::before { opacity: 1; }
+        .feature-card.highlight-card { border: 2px solid var(--primary); }
+        .feature-icon-wrapper { font-size: 44px; margin-bottom: 18px; }
+        .feature-title { font-size: 20px; font-weight: 700; margin-bottom: 10px; color: var(--dark); }
+        .feature-description { color: var(--gray); font-size: 15px; line-height: 1.7; }
+        
+        /* Screenshots */
+        .screenshots-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+        .screenshot-card { background: var(--white); border-radius: 24px; overflow: hidden; box-shadow: 0 4px 24px rgba(0,0,0,0.06); border: 1px solid rgba(0,0,0,0.04); transition: all 0.3s; }
+        .screenshot-card:hover { transform: translateY(-8px); box-shadow: 0 12px 40px rgba(0,0,0,0.12); }
+        .screenshot-label { background: var(--primary); color: var(--dark); padding: 12px 20px; font-weight: 600; font-size: 14px; }
+        .screenshot-image { width: 100%; height: auto; display: block; cursor: pointer; transition: transform 0.3s; }
+        .screenshot-image:hover { transform: scale(1.03); }
+        .screenshot-info { padding: 20px; }
+        .screenshot-info h4 { font-size: 18px; margin-bottom: 8px; color: var(--dark); }
+        .screenshot-info p { color: var(--gray); font-size: 14px; line-height: 1.6; }
+        
+        /* Stats */
+        .stats { background: linear-gradient(135deg, var(--dark) 0%, #1e293b 100%); color: var(--white); padding: 80px 0; }
+        .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; text-align: center; }
+        .stat-item { padding: 20px; }
+        .stat-number { font-family: 'Poppins', sans-serif; font-size: 52px; font-weight: 800; display: block; color: var(--primary); }
+        .stat-unit { font-size: 24px; opacity: 0.8; }
+        .stat-label { font-size: 15px; opacity: 0.85; margin-top: 8px; display: block; }
+        
+        /* CTA */
+        .cta { background: var(--dark); color: var(--white); text-align: center; padding: 100px 0; }
+        .cta-content { max-width: 650px; margin: 0 auto; }
+        .cta-title { font-size: 44px; font-weight: 800; margin-bottom: 18px; }
+        .cta-text { font-size: 20px; margin-bottom: 32px; opacity: 0.95; line-height: 1.7; }
+        .cta-note { margin-top: 20px; font-size: 15px; opacity: 0.9; }
+        
+        /* Comparison */
+        .comparison-table-wrapper { overflow-x: auto; border-radius: 20px; }
+        .comparison-table { width: 100%; border-collapse: separate; border-spacing: 0; background: var(--white); border-radius: 20px; overflow: hidden; box-shadow: 0 4px 24px rgba(0,0,0,0.06); }
+        .comparison-table th, .comparison-table td { padding: 20px 28px; text-align: left; border-bottom: 1px solid #f1f5f9; }
+        .comparison-table th { background: var(--dark); color: var(--white); font-weight: 600; font-size: 15px; }
+        .comparison-table th:first-child { border-top-left-radius: 20px; }
+        .comparison-table th:last-child { border-top-right-radius: 20px; }
+        .comparison-table th.highlight-col { background: var(--primary); color: var(--dark); }
+        .comparison-table td.highlight-col { background: #fffde7; color: var(--dark); font-weight: 600; }
+        .comparison-table tr:last-child td { border-bottom: none; }
+        .comparison-note { text-align: center; color: var(--gray); font-size: 14px; margin-top: 20px; }
+        
+        /* FAQ */
+        .faq-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+        .faq-item { background: var(--white); padding: 28px; border-radius: 20px; box-shadow: 0 4px 24px rgba(0,0,0,0.05); border: 1px solid rgba(0,0,0,0.04); transition: all 0.3s; }
+        .faq-item:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.08); }
+        .faq-question { font-size: 18px; font-weight: 700; margin-bottom: 14px; color: var(--dark); }
+        .faq-answer { color: var(--gray); font-size: 15px; line-height: 1.7; }
+        
+        /* Testimonials */
+        .testimonials { background: linear-gradient(180deg, #f8fafc 0%, #e2e8f0 100%); }
+        .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+        .testimonial-card { background: var(--white); padding: 32px; border-radius: 24px; box-shadow: 0 4px 24px rgba(0,0,0,0.05); border: 1px solid rgba(0,0,0,0.04); transition: all 0.3s; }
+        .testimonial-card:hover { transform: translateY(-6px); box-shadow: 0 12px 40px rgba(0,0,0,0.1); }
+        .testimonial-rating { color: var(--primary); font-size: 20px; margin-bottom: 16px; letter-spacing: 4px; }
+        .testimonial-text { font-size: 16px; margin-bottom: 20px; color: var(--dark); line-height: 1.8; font-style: italic; }
+        .testimonial-author { display: flex; flex-direction: column; gap: 6px; }
+        .author-name { font-weight: 700; font-size: 15px; color: var(--dark); }
+        .author-badge { font-size: 13px; color: var(--dark); font-weight: 600; }
+        
         /* Footer */
-        .footer {
-            background: #1a1a1a;
-            color: white;
-            padding: 60px 20px 30px;
-            text-align: center;
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            max-width: 1200px;
-            margin: 0 auto 40px;
-            padding-bottom: 40px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .footer-brand {
-            text-align: center;
-        }
-
-        .footer-description {
-            font-size: 14px;
-            color: #aaa;
-            margin-top: 15px;
-        }
-
-        .footer-links {
-            text-align: center;
-        }
-
-        .footer-links h4 {
-            font-size: 16px;
-            font-weight: 700;
-            margin-bottom: 15px;
-        }
-
-        .legal-link {
-            display: block;
-            color: #aaa;
-            text-decoration: none;
-            font-size: 14px;
-            margin: 8px 0;
-            transition: color 0.3s ease;
-        }
-
-        .legal-link:hover {
-            color: #ffc000;
-        }
-
-        .footer-bottom {
-            text-align: center;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .copyright {
-            font-size: 12px;
-            color: #888;
-            margin-bottom: 8px;
-        }
-
-        .disclaimer {
-            font-size: 12px;
-            color: #666;
-        }
-
+        .footer { background: var(--dark); color: var(--white); padding: 60px 0 28px; }
+        .footer-content { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 40px; margin-bottom: 40px; }
+        .footer-brand { max-width: 320px; }
+        .footer-description { margin-top: 14px; color: #94a3b8; font-size: 15px; line-height: 1.7; }
+        .footer-links h4 { font-size: 16px; margin-bottom: 18px; color: var(--white); }
+        .legal-link { color: #94a3b8; text-decoration: none; display: block; margin-bottom: 12px; font-size: 14px; transition: color 0.3s; cursor: pointer; }
+        .legal-link:hover { color: var(--white); }
+        .footer-bottom { border-top: 1px solid #1e293b; padding-top: 28px; text-align: center; }
+        .copyright { color: #64748b; font-size: 14px; }
+        .disclaimer { color: #475569; font-size: 13px; margin-top: 10px; }
+        
+        /* Lightbox */
+        .lightbox { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); z-index: 2000; justify-content: center; align-items: center; padding: 40px; }
+        .lightbox.active { display: flex; }
+        .lightbox-content { max-width: 90%; max-height: 90%; }
+        .lightbox-content img { max-width: 100%; max-height: 80vh; border-radius: 16px; box-shadow: 0 20px 60px rgba(0,0,0,0.5); }
+        .lightbox-caption { color: var(--white); text-align: center; margin-top: 20px; font-size: 16px; }
+        .lightbox-close { position: absolute; top: 24px; right: 24px; background: none; border: none; color: var(--white); font-size: 44px; cursor: pointer; opacity: 0.7; transition: opacity 0.3s; }
+        .lightbox-close:hover { opacity: 1; }
+        .lightbox-nav { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(255,255,255,0.1); border: none; color: var(--white); font-size: 28px; padding: 18px 24px; cursor: pointer; border-radius: 12px; transition: background 0.3s; }
+        .lightbox-nav:hover { background: rgba(255,255,255,0.2); }
+        .lightbox-prev { left: 24px; }
+        .lightbox-next { right: 24px; }
+        
+        /* Legal Modal */
+        .legal-modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 2000; justify-content: center; align-items: center; padding: 24px; }
+        .legal-modal.active { display: flex; }
+        .legal-modal-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); backdrop-filter: blur(4px); }
+        .legal-modal-content { background: var(--white); padding: 40px; border-radius: 24px; max-width: 620px; width: 100%; max-height: 85vh; overflow-y: auto; position: relative; box-shadow: 0 25px 80px rgba(0,0,0,0.3); }
+        .legal-modal-close { position: absolute; top: 20px; right: 20px; background: none; border: none; font-size: 32px; cursor: pointer; color: var(--gray); transition: color 0.3s; }
+        .legal-modal-close:hover { color: var(--dark); }
+        .legal-section { margin-bottom: 28px; }
+        .legal-section h3 { font-size: 20px; margin-bottom: 14px; color: var(--dark); }
+        .legal-section p { color: var(--gray); font-size: 15px; line-height: 1.8; }
+        .legal-section ul { margin: 14px 0; padding-left: 22px; }
+        .legal-section li { color: var(--gray); font-size: 15px; margin-bottom: 10px; }
+        .legal-note { font-size: 14px; color: var(--gray); }
+        
+        .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
+        
         /* Responsive */
-        @media (max-width: 768px) {
-            .header-content {
-                flex-direction: column;
-                gap: 15px;
-            }
-
-            .nav {
-                flex-direction: column;
-                gap: 15px;
-            }
-
-            .hero-title {
-                font-size: 32px;
-            }
-
-            .section-title {
-                font-size: 28px;
-            }
-
-            .step-card, .feature-card {
-                min-width: 100%;
-                max-width: 100%;
-            }
-
-            .step-connector {
-                transform: rotate(90deg);
-                margin: 10px 0;
-            }
-
-            .section-container {
-                padding: 40px 20px;
-                margin: 20px 10px;
-            }
+        @media (max-width: 1024px) {
+            .features-grid, .screenshots-grid, .testimonials-grid { grid-template-columns: repeat(2, 1fr); }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
         }
-
-        /* Section container styling */
-        .how-it-works .container,
-        .features .container,
-        .faq .container,
-        .testimonials .container {
-            background: white;
-            border-radius: 16px;
-            padding: 60px 40px;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-            border-top: 5px solid #ffc000;
-        }
-
         @media (max-width: 768px) {
-            .how-it-works .container,
-            .features .container,
-            .faq .container,
-            .testimonials .container {
-                padding: 40px 20px;
-            }
+            .nav { display: none; }
+            .hero-title { font-size: 36px; }
+            .hero-subtitle { font-size: 17px; }
+            .section-title { font-size: 32px; }
+            .steps-grid { flex-direction: column; align-items: center; }
+            .step-connector { transform: rotate(90deg); padding: 20px 0; margin: 0; }
+            .features-grid, .screenshots-grid, .testimonials-grid { grid-template-columns: 1fr; }
+            .faq-grid { grid-template-columns: 1fr; }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+            .floating-card { display: none; }
+            .footer-content { flex-direction: column; }
+            .cta-title { font-size: 32px; }
+            .comparison-table { font-size: 14px; }
+            .comparison-table th, .comparison-table td { padding: 14px 16px; }
         }
     </style>
 </head>
@@ -730,1400 +332,13 @@
     <header class="header">
         <div class="container header-content">
             <div class="logo">
-                <span class="logo-icon">◆</span>
-                <span class="logo-text">Custard</span>
+                <img src="https://cdn.joincustard.co.uk/static/logo/logo.svg" alt="Custard" class="logo-img">
             </div>
             <nav class="nav">
-                <a href="#how-it-works" class="nav-link">How It Works</a>
-                <a href="#features" class="nav-link">Features</a>
-                <a href="#faq" class="nav-link">FAQ</a>
-                <a href="#reviews" class="nav-link">Reviews</a>
-            </nav>
-            <a href="https://joincustard.co.uk/account/register?referral=2638bb71-4f37-4a54-a7b3-61e5b221c7fe&utm_source=referral&utm_medium=affiliate" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Get Started</a>
-        </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container hero-content">
-            <!-- Bonus Badge -->
-            <div class="bonus-badge">
-                <span class="bonus-icon">🎁</span>
-                <span class="bonus-text">New User Bonus: <strong>£2.50</strong> in your balance!</span>
-            </div>
-            <div class="hero-badge">
-                <span class="badge-icon">✓</span>
-                <span>Rapid Pay - Get Paid Within 48 Hours</span>
-            </div>
-            <h1 class="hero-title">Get Paid Fast for Playing Games & Taking Surveys</h1>
-            <div class="uk-notice">
-                <span class="uk-notice-icon">🇬🇧</span>
-                <span>UK Residents Only — Must be 18+</span>
-            </div>
-            <p class="hero-subtitle">The UK's fastest-paying get-paid-to site. Earn money online playing games, taking paid surveys, and unlocking cashback offers — all from your phone, paid within 48 hours.</p>
-            <div class="hero-cta-group">
-                <a href="https://joincustard.co.uk/account/register?referral=2638bb71-4f37-4a54-a7b3-61e5b221c7fe&utm_source=referral&utm_medium=affiliate" class="btn btn-primary btn-large" target="_blank" rel="noopener noreferrer">
-                    Get Started & Claim £2.50 Bonus
-                    <span class="btn-arrow">→</span>
-                </a>
-                <p class="hero-note">No hidden fees • £10 minimum payout • UK only • <span class="bonus-highlight">£2.50 sign-up bonus</span></p>
-                <a href="https://joincustard.co.uk/account/register?referral=2638bb71-4f37-4a54-a7b3-61e5b221c7fe&utm_source=referral&utm_medium=affiliate" class="hero-secondary-cta" target="_blank" rel="noopener noreferrer">Start earning money on Custard UK</a>
-            </div>
-            <!-- QR Code Section -->
-            <div class="qr-section">
-                <img src="qr.png" alt="Custard QR code - Scan to join and get paid for playing games, surveys and free trials in the UK. Sign up link for GPT rewards site with fast 48 hour payouts" class="qr-image">
-                <p class="qr-text">Scan to join & claim your £2.50 bonus</p>
-            </div>
-            <div class="trust-badges">
-                <div class="trust-badge">
-                    <span class="trust-icon">🛡️</span>
-                    <span>Secure Payments</span>
-                </div>
-                <div class="trust-badge">
-                    <span class="trust-icon">⚡</span>
-                    <span>48hr Payouts</span>
-                </div>
-                <div class="trust-badge">
-                    <span class="trust-icon">✓</span>
-                    <span>Verified Reviews</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- How It Works Section -->
-    <section id="how-it-works" class="how-it-works">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">How It Works</h2>
-                <p class="section-subtitle">Start earning in just 3 simple steps</p>
-            </div>
-            <div class="steps-grid">
-                <div class="step-card" aria-label="Step 1: Sign up free to join Custard GPT site UK. Create your free account in minutes and start earning money from games, surveys and offers. No fees to sign up.">
-                    <div class="step-number">1</div>
-                    <div class="step-icon-wrapper">
-                        <span class="step-icon">👤</span>
-                    </div>
-                    <h3 class="step-title">Sign Up Free</h3>
-                    <p class="step-description">Create your free account in minutes. Just enter your details and you're ready to start earning.</p>
-                    <span class="sr-only">Sign up free on Custard UK - the get paid to site where you can earn money by playing games, taking surveys and completing offers. No hidden fees, instant registration.</span>
-                </div>
-                <div class="step-connector">
-                    <span class="connector-arrow">→</span>
-                </div>
-                <div class="step-card" aria-label="Step 2: Complete paid tasks on Custard. Play games for money, take paid surveys, test new apps and earn cashback. Multiple ways to earn on GPT rewards site.">
-                    <div class="step-number">2</div>
-                    <div class="step-icon-wrapper">
-                        <span class="step-icon">🎯</span>
-                    </div>
-                    <h3 class="step-title">Complete Tasks</h3>
-                    <p class="step-description">Play exciting games, take quick surveys, test new apps, and unlock cashback offers.</p>
-                    <span class="sr-only">Complete paid tasks on Custard - earn money playing games like Monopoly GO, complete opinion surveys, test mobile apps and unlock cashback offers. Get paid for things you do anyway.</span>
-                </div>
-                <div class="step-connector">
-                    <span class="connector-arrow">→</span>
-                </div>
-                <div class="step-card" aria-label="Step 3: Get paid fast with Rapid Pay. Cash out within 48 hours on Custard UK. Low £10 minimum payout. One of the fastest paying GPT sites in the UK.">
-                    <div class="step-number">3</div>
-                    <div class="step-icon-wrapper">
-                        <span class="step-icon">💸</span>
-                    </div>
-                    <h3 class="step-title">Get Paid Fast</h3>
-                    <p class="step-description">Cash out with their Rapid Pay feature and receive your money within 48 hours.</p>
-                    <span class="sr-only">Get paid fast with Custard Rapid Pay - receive your earnings within 48 hours. Low £10 minimum payout makes it easy to cash out. One of the fastest paying rewards sites in the UK.</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Features Section -->
-    <section id="features" class="features">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Why Choose Custard?</h2>
-                <p class="section-subtitle">The fastest-paying rewards platform in the UK</p>
-            </div>
-            <div class="features-grid">
-                <div class="feature-card highlight-card" aria-label="Rapid Pay feature - Get paid within 48 hours on Custard UK. One of the fastest paying GPT sites with RapidPay. No waiting weeks for your earnings like other platforms.">
-                    <div class="feature-icon-wrapper">
-                        <span class="feature-icon">⚡</span>
-                    </div>
-                    <h3 class="feature-title">Rapid Payouts</h3>
-                    <p class="feature-description">With their Rapid Pay feature, you can get paid within <strong>48 hours</strong> of completing offers. No waiting weeks like other platforms.</p>
-                    <span class="sr-only">Rapid Pay - Custard offers the fastest payouts in the UK GPT market. Get paid within 48 hours with RapidPay feature. Say goodbye to waiting weeks for your earnings.</span>
-                </div>
-                <div class="feature-card" aria-label="Game testing feature - Get paid to play games on your mobile phone. Earn money testing games like Monopoly GO, Merge Gardens and more. Paid gaming apps with real cash rewards.">
-                    <div class="feature-icon-wrapper">
-                        <span class="feature-icon">🎮</span>
-                    </div>
-                    <h3 class="feature-title">Game Testing</h3>
-                    <p class="feature-description">Play new games before anyone else and get paid for your feedback. Fun way to earn while gaming.</p>
-                    <span class="sr-only">Game testing on Custard - get paid to play popular mobile games including Monopoly GO, Merge Gardens, Goblins Wood and more. Earn up to £277 per offer. Real cash rewards for testing games.</span>
-                </div>
-                <div class="feature-card" aria-label="Quick surveys feature - Earn money taking paid surveys online. Complete opinion surveys and get cash rewards. Short surveys that pay well with £5 bonus for 5 surveys completed.">
-                    <div class="feature-icon-wrapper">
-                        <span class="feature-icon">📊</span>
-                    </div>
-                    <h3 class="feature-title">Quick Surveys</h3>
-                    <p class="feature-description">Share your opinions and earn money for your time. Quick surveys that pay real cash straight to your account.</p>
-                    <span class="sr-only">Quick surveys on Custard - Get paid £1-£5 per survey for sharing your opinions. Survey opportunities with the potential £5 bonus for completing 5 surveys. Easy way to earn money giving feedback.</span>
-                </div>
-                <div class="feature-card" aria-label="Cashback shopping feature - Earn cashback rewards on your everyday shopping. Get cash back on purchases at top UK retailers. Shopping rewards program integrated into Custard platform.">
-                    <div class="feature-icon-wrapper">
-                        <span class="feature-icon">🛍️</span>
-                    </div>
-                    <h3 class="feature-title">Cashback Shopping</h3>
-                    <p class="feature-description">Earn cashback rewards while shopping at your favorite UK retailers. Get paid for purchases you'd make anyway.</p>
-                    <span class="sr-only">Cashback shopping on Custard - Earn money back on everyday shopping with partner retailers. Integrated cashback rewards program with popular UK shops. Get paid for your regular purchases.</span>
-                </div>
-                <div class="feature-card" aria-label="Free trials feature - Get paid to try free trial offers. Complete free trial offers from popular brands and services. Earn money testing premium services with no credit card required.">
-                    <div class="feature-icon-wrapper">
-                        <span class="feature-icon">🎁</span>
-                    </div>
-                    <h3 class="feature-title">Free Trial Offers</h3>
-                    <p class="feature-description">Try new services and products for free while earning money. Risk-free way to test premium offers.</p>
-                    <span class="sr-only">Free trial offers on Custard - Get paid to try free trial versions of popular brands. Complete offers with no credit card required in most cases. Earn money testing premium services risk-free.</span>
-                </div>
-                <div class="feature-card" aria-label="Fast withdrawal feature - Easy money withdrawals with low minimum payout. Withdraw earnings via multiple payment methods. Fast and secure payment processing on Custard rewards platform.">
-                    <div class="feature-icon-wrapper">
-                        <span class="feature-icon">💳</span>
-                    </div>
-                    <h3 class="feature-title">Easy Withdrawal</h3>
-                    <p class="feature-description">Withdraw your earnings easily with multiple payment options. Low £10 minimum makes it quick to cash out.</p>
-                    <span class="sr-only">Easy withdrawal on Custard - Multiple payment methods for cashing out. Low £10 minimum payout threshold. Secure payment processing. Fast and reliable fund transfers.</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section id="faq" class="faq">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Frequently Asked Questions</h2>
-                <p class="section-subtitle">Everything you need to know about earning with Custard</p>
-            </div>
-            <div class="faq-items">
-                <div class="faq-item">
-                    <h3 class="faq-question">Is Custard available in the UK?</h3>
-                    <p class="faq-answer">Yes, Custard is exclusively available to UK residents aged 18 and over.</p>
-                </div>
-                <div class="faq-item">
-                    <h3 class="faq-question">How do I earn money on Custard?</h3>
-                    <p class="faq-answer">You can earn money by playing games, completing paid surveys, trying free trials, and shopping cashback at top UK retailers.</p>
-                </div>
-                <div class="faq-item">
-                    <h3 class="faq-question">How fast does Custard pay out?</h3>
-                    <p class="faq-answer">Custard's Rapid Pay feature pays out within 48 hours, making it one of the fastest paying GPT sites in the UK.</p>
-                </div>
-                <div class="faq-item">
-                    <h3 class="faq-question">What is the minimum payout on Custard?</h3>
-                    <p class="faq-answer">The minimum payout is just £10, one of the lowest thresholds among UK get paid to sites.</p>
-                </div>
-                <div class="faq-item">
-                    <h3 class="faq-question">Is Custard free to join?</h3>
-                    <p class="faq-answer">Yes, signing up is completely free and you receive a £2.50 bonus just for creating your account.</p>
-                </div>
-                <div class="faq-item">
-                    <h3 class="faq-question">What is a GPT site?</h3>
-                    <p class="faq-answer">GPT stands for "Get Paid To" — sites like Custard that pay you to complete tasks like surveys, games, and offers in your spare time.</p>
-                </div>
-                <div class="faq-item">
-                    <h3 class="faq-question">How does Custard compare to other beermoney UK sites?</h3>
-                    <p class="faq-answer">Custard stands out in the UK beermoney scene for its RapidPay feature (48-hour payouts), a UK-exclusive focus meaning more relevant offers, and a £2.50 sign-up bonus. Many users on r/beermoneyuk rate it among the best GPT sites for fast, reliable earnings.</p>
-                </div>
-                <div class="faq-item">
-                    <h3 class="faq-question">How much can I realistically earn on Custard?</h3>
-                    <p class="faq-answer">Earnings vary, but users report making £10–£50+ per month doing surveys and game offers in their spare time. Some game testing offers pay up to £277 per completed offer. Most people reach the £10 cashout threshold within their first week.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section id="reviews" class="testimonials">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">What Users Say</h2>
-                <p class="section-subtitle">Real reviews from real earners</p>
-            </div>
-            <div class="testimonials-grid">
-                <div class="testimonial-card" aria-label="Trustpilot review - User earned £10 quickly by playing games and completing surveys on Custard. Easy payout with £10 minimum compared to other GPT sites like TesterUp.">
-                    <div class="testimonial-rating">★★★★★</div>
-                    <p class="testimonial-text">"I have played games and done a couple of quick surveys and earned £10 very quickly. Pay out was easy at £10 minimum so in comparison to TesterUp where i..."</p>
-                    <div class="testimonial-author">
-                        <span class="author-name">Trustpilot Reviewer</span>
-                        <span class="author-badge">Verified User</span>
-                    </div>
-                    <span class="sr-only">Verified Trustpilot review: User earned £10 quickly by playing games and completing paid surveys on Custard. Easy payout system with £10 minimum threshold. User compares favourably to TesterUp GPT site.</span>
-                </div>
-                <div class="testimonial-card" aria-label="Customer review - One of the best GPT sites with fast payouts and plenty of variety. User loves the games and cashback offers, finds it easy to use.">
-                    <div class="testimonial-rating">★★★★★</div>
-                    <p class="testimonial-text">"One of the best GPT sites I've used. Payouts are fast and there's plenty of variety. Love the games and the cashback offers – easy to use."</p>
-                    <div class="testimonial-author">
-                        <span class="author-name">Review from Make Money Without A Job</span>
-                        <span class="author-badge">Verified User</span>
-                    </div>
-                    <span class="sr-only">Verified customer review: One of the best GPT sites used with fast payouts and variety of earning options. User loves the game testing and cashback offers. Finds the platform easy to navigate and use.</span>
-                </div>
-                <div class="testimonial-card" aria-label="Reddit user review - Prefers Custard over Freecash for easier navigation and better customer support. Payouts are just as good on this UK GPT rewards site.">
-                    <div class="testimonial-rating">★★★★★</div>
-                    <p class="testimonial-text">"The payouts look to be the same as freecash but I much prefer using Custard. Way easier to navigate and also their customer support is really good."</p>
-                    <div class="testimonial-author">
-                        <span class="author-name">Reddit User - r/GetPaidToPlay</span>
-                        <span class="author-badge">Verified User</span>
-                    </div>
-                    <span class="sr-only">Verified Reddit review from GetPaidToPlay community: User prefers Custard over Freecash due to easier navigation and better customer support. Payouts are equally good on this UK rewards site.</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <div class="logo">
-                        <span class="logo-icon">◆</span>
-                        <span class="logo-text">Custard</span>
-                    </div>
-                    <p class="footer-description">The fastest-paying rewards platform in the UK. Earn money by playing games, taking surveys, and shopping.</p>
-                </div>
-                <div class="footer-links">
-                    <h4>Legal</h4>
-                    <a href="#" class="legal-link">Terms & Conditions</a>
-                    <a href="#" class="legal-link">Privacy Info</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p class="copyright">© 2026 Custard Earnings. This is an independent landing page. Not affiliated with joincustard.co.uk.</p>
-                <p class="disclaimer">Results may vary. Individual earnings depend on task availability and completion.</p>
-            </div>
-        </div>
-    </footer>
-</body>
-</html><!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Get Paid to Play Games & Take Surveys | £2.50 Bonus | Custard UK</title>
-
-    <!-- SEO Meta Tags - Keywords -->
-    <meta name="keywords" content="get paid to, GPT sites UK, paid surveys, paid to play games, play games for money, earn money playing games, paid to sign up, free sign up offers, free money offers UK, rewards sites, cashback offers, beermoney UK, side hustle, make money online, paid offers, free trials, get paid to test apps, paid gaming apps, money making apps, survey apps UK, cash rewards, referral program, welcome bonus, instant payout, rapid pay, game testing, paid apps testing, online surveys, extra cash, earn from home, passive income, pocket money, student side hustle">
-
-    <!-- SEO Meta Tags - Description -->
-    <meta name="description" content="Earn real money playing games, taking surveys and shopping cashback in the UK. £2.50 sign-up bonus, £10 minimum payout, get paid within 48 hours. Join Custard free today.">
-
-    <!-- SEO Meta Tags - Robots & Indexing -->
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-    <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-    <meta name="bingbot" content="index, follow, max-image-preview:large">
-
-    <!-- SEO Meta Tags - Author & Publisher -->
-    <meta name="author" content="Custard Earnings">
-    <meta name="publisher" content="Custard Earnings">
-    <meta name="copyright" content="2026 Custard Earnings">
-
-    <!-- SEO Meta Tags - Language & Location -->
-    <meta name="language" content="en-GB">
-    <meta name="geo.region" content="GB">
-    <meta name="geo.country" content="UK">
-    <meta name="distribution" content="UK">
-
-    <!-- SEO Meta Tags - Content Classification -->
-    <meta name="category" content="Money Making, Rewards, GPT Sites">
-    <meta name="rating" content="General">
-    <meta name="referrer" content="unsafe-url">
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://custard-landing-page.vercel.app/">
-    <meta property="og:title" content="Get Paid to Play Games & Take Surveys | £2.50 Bonus | Custard UK">
-    <meta property="og:description" content="Earn real money playing games, taking surveys and shopping cashback in the UK. £2.50 sign-up bonus, £10 minimum payout, get paid within 48 hours. Join Custard free today.">
-    <meta property="og:image" content="qr.png">
-    <meta property="og:site_name" content="Custard Earnings">
-    <meta property="og:locale" content="en_GB">
-
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@custarduk">
-    <meta name="twitter:creator" content="@custarduk">
-    <meta name="twitter:title" content="Get Paid to Play Games & Take Surveys | £2.50 Bonus | Custard UK">
-    <meta name="twitter:description" content="Earn real money playing games, taking surveys and shopping cashback in the UK. £2.50 sign-up bonus, £10 minimum payout, get paid within 48 hours.">
-    <meta name="twitter:image" content="qr.png">
-
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://custard-landing-page.vercel.app/">
-
-    <!-- WebSite / WebPage Structured Data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@graph": [
-            {
-                "@type": "WebSite",
-                "@id": "https://custard-landing-page.vercel.app/#website",
-                "url": "https://custard-landing-page.vercel.app/",
-                "name": "Custard Earnings – Get Paid to Play Games & Take Surveys UK",
-                "description": "Earn real money playing games, taking surveys and shopping cashback in the UK. £2.50 sign-up bonus, £10 minimum payout, get paid within 48 hours.",
-                "inLanguage": "en-GB"
-            },
-            {
-                "@type": "WebPage",
-                "@id": "https://custard-landing-page.vercel.app/#webpage",
-                "url": "https://custard-landing-page.vercel.app/",
-                "name": "Get Paid to Play Games & Take Surveys | £2.50 Bonus | Custard UK",
-                "isPartOf": { "@id": "https://custard-landing-page.vercel.app/#website" },
-                "about": {
-                    "@type": "Thing",
-                    "name": "Custard GPT Site UK",
-                    "description": "Custard is a UK get-paid-to (GPT) rewards platform where users earn money by playing games, taking surveys, trying free trials and shopping cashback."
-                },
-                "breadcrumb": {
-                    "@type": "BreadcrumbList",
-                    "itemListElement": [
-                        {
-                            "@type": "ListItem",
-                            "position": 1,
-                            "name": "Home",
-                            "item": "https://custard-landing-page.vercel.app/"
-                        }
-                    ]
-                },
-                "inLanguage": "en-GB"
-            }
-        ]
-    }
-    </script>
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>◆</text></svg>">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
-    
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            color: #333;
-            line-height: 1.6;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Header Styles */
-        .header {
-            background: white;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 0;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 24px;
-            font-weight: 700;
-            color: #ffc000;
-        }
-
-        .logo-icon {
-            font-size: 28px;
-        }
-
-        .nav {
-            display: flex;
-            gap: 30px;
-            text-align: center;
-        }
-
-        .nav-link {
-            text-decoration: none;
-            color: #666;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-
-        .nav-link:hover {
-            color: #ffc000;
-        }
-
-        .btn {
-            padding: 12px 24px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-            text-align: center;
-            display: inline-block;
-        }
-
-        .btn-primary {
-            background: linear-gradient(135deg, #ffc000 0%, #ff9800 100%);
-            color: white;
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 16px rgba(255, 192, 0, 0.3);
-        }
-
-        .btn-large {
-            padding: 16px 40px;
-            font-size: 16px;
-        }
-
-        /* Hero Section */
-        .hero {
-            padding: 80px 20px;
-            text-align: center;
-            background: linear-gradient(135deg, #ffffff 0%, #f0f4f8 100%);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 30px;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .bonus-badge {
-            background: linear-gradient(135deg, #ffc000 0%, #ff9800 100%);
-            color: white;
-            padding: 12px 24px;
-            border-radius: 50px;
-            font-weight: 600;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            box-shadow: 0 4px 12px rgba(255, 192, 0, 0.3);
-        }
-
-        .hero-badge {
-            background: #e8f5e9;
-            color: #2e7d32;
-            padding: 12px 20px;
-            border-radius: 8px;
-            font-weight: 600;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .hero-title {
-            font-family: 'Poppins', sans-serif;
-            font-size: 48px;
-            font-weight: 800;
-            color: #1a1a1a;
-            margin: 20px 0;
-            line-height: 1.2;
-        }
-
-        .hero-subtitle {
-            font-size: 18px;
-            color: #666;
-            max-width: 600px;
-            margin: 20px auto;
-        }
-
-        .uk-notice {
-            background: #f3e5f5;
-            color: #6a1b9a;
-            padding: 12px 24px;
-            border-radius: 8px;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            font-weight: 600;
-        }
-
-        .hero-cta-group {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            align-items: center;
-        }
-
-        .btn-arrow {
-            margin-left: 8px;
-        }
-
-        .hero-note {
-            font-size: 14px;
-            color: #888;
-            margin-top: 10px;
-        }
-
-        .hero-secondary-cta {
-            color: #ffc000;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            border-bottom: 2px solid #ffc000;
-            padding-bottom: 2px;
-        }
-
-        .hero-secondary-cta:hover {
-            color: #ff9800;
-            border-bottom-color: #ff9800;
-        }
-
-        .qr-section {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 15px;
-            background: white;
-            padding: 20px;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        }
-
-        .qr-image {
-            width: 150px;
-            height: 150px;
-            border-radius: 8px;
-        }
-
-        .qr-text {
-            font-weight: 600;
-            color: #333;
-        }
-
-        .trust-badges {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .trust-badge {
-            background: white;
-            padding: 12px 20px;
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-            font-weight: 600;
-            color: #333;
-        }
-
-        /* Sections Container Styling */
-        .section-container {
-            background: white;
-            border-radius: 16px;
-            padding: 60px 40px;
-            margin: 40px auto;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-            max-width: 1100px;
-            border-top: 5px solid #ffc000;
-        }
-
-        .how-it-works {
-            padding: 60px 20px;
-        }
-
-        .features {
-            padding: 60px 20px;
-        }
-
-        .faq {
-            padding: 60px 20px;
-        }
-
-        .testimonials {
-            padding: 60px 20px;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-
-        .section-title {
-            font-family: 'Poppins', sans-serif;
-            font-size: 40px;
-            font-weight: 800;
-            color: #1a1a1a;
-            margin-bottom: 15px;
-        }
-
-        .section-subtitle {
-            font-size: 16px;
-            color: #888;
-        }
-
-        /* Steps Grid */
-        .steps-grid {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
-            align-items: flex-start;
-        }
-
-        .step-card {
-            background: linear-gradient(135deg, #ffffff 0%, #f9f9f9 100%);
-            border: 2px solid #f0f0f0;
-            border-radius: 12px;
-            padding: 30px;
-            text-align: center;
-            flex: 1;
-            min-width: 250px;
-            max-width: 300px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-        }
-
-        .step-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
-            border-color: #ffc000;
-        }
-
-        .step-number {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 50px;
-            height: 50px;
-            background: linear-gradient(135deg, #ffc000 0%, #ff9800 100%);
-            color: white;
-            border-radius: 50%;
-            font-weight: 700;
-            font-size: 24px;
-            margin-bottom: 15px;
-        }
-
-        .step-icon-wrapper {
-            font-size: 48px;
-            margin: 15px 0;
-        }
-
-        .step-title {
-            font-family: 'Poppins', sans-serif;
-            font-size: 20px;
-            font-weight: 700;
-            color: #1a1a1a;
-            margin: 15px 0;
-        }
-
-        .step-description {
-            font-size: 14px;
-            color: #666;
-            line-height: 1.6;
-        }
-
-        .step-connector {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #ffc000;
-            font-size: 24px;
-            font-weight: 700;
-        }
-
-        /* Features Grid */
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            margin-top: 40px;
-        }
-
-        .feature-card {
-            background: white;
-            border: 2px solid #f0f0f0;
-            border-radius: 12px;
-            padding: 30px;
-            text-align: center;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-        }
-
-        .feature-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
-            border-color: #ffc000;
-        }
-
-        .highlight-card {
-            background: linear-gradient(135deg, #ffc000 0%, #ff9800 100%);
-            color: white;
-            border-color: #ff9800;
-        }
-
-        .highlight-card:hover {
-            border-color: #ff8500;
-        }
-
-        .feature-icon-wrapper {
-            font-size: 48px;
-            margin-bottom: 15px;
-        }
-
-        .feature-title {
-            font-family: 'Poppins', sans-serif;
-            font-size: 18px;
-            font-weight: 700;
-            margin: 15px 0;
-        }
-
-        .feature-description {
-            font-size: 14px;
-            line-height: 1.6;
-        }
-
-        .highlight-card .feature-description {
-            color: rgba(255, 255, 255, 0.95);
-        }
-
-        /* FAQ Section */
-        .faq-items {
-            display: grid;
-            gap: 20px;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .faq-item {
-            background: white;
-            border-left: 5px solid #ffc000;
-            border-radius: 8px;
-            padding: 25px;
-            transition: all 0.3s ease;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-        }
-
-        .faq-item:hover {
-            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
-        }
-
-        .faq-question {
-            font-family: 'Poppins', sans-serif;
-            font-size: 16px;
-            font-weight: 700;
-            color: #1a1a1a;
-            margin-bottom: 10px;
-            cursor: pointer;
-        }
-
-        .faq-answer {
-            font-size: 14px;
-            color: #666;
-            line-height: 1.8;
-        }
-
-        /* Testimonials Grid */
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            margin-top: 40px;
-        }
-
-        .testimonial-card {
-            background: white;
-            border-radius: 12px;
-            padding: 25px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
-        }
-
-        .testimonial-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
-            border-color: #ffc000;
-        }
-
-        .testimonial-rating {
-            color: #ffc000;
-            font-size: 16px;
-            margin-bottom: 15px;
-        }
-
-        .testimonial-text {
-            font-size: 14px;
-            color: #666;
-            line-height: 1.8;
-            font-style: italic;
-            margin: 15px 0;
-        }
-
-        .testimonial-author {
-            display: flex;
-            flex-direction: column;
-            gap: 5px;
-            margin-top: 15px;
-        }
-
-        .author-name {
-            font-weight: 600;
-            color: #1a1a1a;
-            font-size: 14px;
-        }
-
-        .author-badge {
-            background: #e8f5e9;
-            color: #2e7d32;
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: 600;
-            width: fit-content;
-        }
-
-        /* Footer */
-        .footer {
-            background: #1a1a1a;
-            color: white;
-            padding: 60px 20px 30px;
-            text-align: center;
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            max-width: 1200px;
-            margin: 0 auto 40px;
-            padding-bottom: 40px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .footer-brand {
-            text-align: center;
-        }
-
-        .footer-description {
-            font-size: 14px;
-            color: #aaa;
-            margin-top: 15px;
-        }
-
-        .footer-links {
-            text-align: center;
-        }
-
-        .footer-links h4 {
-            font-size: 16px;
-            font-weight: 700;
-            margin-bottom: 15px;
-        }
-
-        .legal-link {
-            display: block;
-            color: #aaa;
-            text-decoration: none;
-            font-size: 14px;
-            margin: 8px 0;
-            transition: color 0.3s ease;
-        }
-
-        .legal-link:hover {
-            color: #ffc000;
-        }
-
-        .footer-bottom {
-            text-align: center;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .copyright {
-            font-size: 12px;
-            color: #888;
-            margin-bottom: 8px;
-        }
-
-        .disclaimer {
-            font-size: 12px;
-            color: #666;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .header-content {
-                flex-direction: column;
-                gap: 15px;
-            }
-
-            .nav {
-                flex-direction: column;
-                gap: 15px;
-            }
-
-            .hero-title {
-                font-size: 32px;
-            }
-
-            .section-title {
-                font-size: 28px;
-            }
-
-            .step-card, .feature-card {
-                min-width: 100%;
-                max-width: 100%;
-            }
-
-            .step-connector {
-                transform: rotate(90deg);
-                margin: 10px 0;
-            }
-
-            .section-container {
-                padding: 40px 20px;
-                margin: 20px 10px;
-            }
-        }
-
-        /* Section container styling */
-        .how-it-works .container,
-        .features .container,
-        .faq .container,
-        .testimonials .container {
-            background: white;
-            border-radius: 16px;
-            padding: 60px 40px;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-            border-top: 5px solid #ffc000;
-        }
-
-        @media (max-width: 768px) {
-            .how-it-works .container,
-            .features .container,
-            .faq .container,
-            .testimonials .container {
-                padding: 40px 20px;
-            }
-        }
-    </style>
-</head>
-<body>
-    <!-- Header -->
-    <header class="header">
-        <div class="container header-content">
-            <div class="logo">
-                <span class="logo-icon">◆</span>
-                <span class="logo-text">Custard</span>
-            </div>
-            <nav class="nav">
-                <a href="#how-it-works" class="nav-link">How It Works</a>
-                <a href="#features" class="nav-link">Features</a>
-                <a href="#faq" class="nav-link">FAQ</a>
-                <a href="#reviews" class="nav-link">Reviews</a>
-            </nav>
-            <a href="https://joincustard.co.uk/account/register?referral=2638bb71-4f37-4a54-a7b3-61e5b221c7fe&utm_source=referral&utm_medium=affiliate" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Get Started</a>
-        </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container hero-content">
-            <!-- Bonus Badge -->
-            <div class="bonus-badge">
-                <span class="bonus-icon">🎁</span>
-                <span class="bonus-text">New User Bonus: <strong>£2.50</strong> in your balance!</span>
-            </div>
-            <div class="hero-badge">
-                <span class="badge-icon">✓</span>
-                <span>Rapid Pay - Get Paid Within 48 Hours</span>
-            </div>
-            <h1 class="hero-title">Get Paid Fast for Playing Games & Taking Surveys</h1>
-            <div class="uk-notice">
-                <span class="uk-notice-icon">🇬🇧</span>
-                <span>UK Residents Only — Must be 18+</span>
-            </div>
-            <p class="hero-subtitle">The UK's fastest-paying get-paid-to site. Earn money online playing games, taking paid surveys, and unlocking cashback offers — all from your phone, paid within 48 hours.</p>
-            <div class="hero-cta-group">
-                <a href="https://joincustard.co.uk/account/register?referral=2638bb71-4f37-4a54-a7b3-61e5b221c7fe&utm_source=referral&utm_medium=affiliate" class="btn btn-primary btn-large" target="_blank" rel="noopener noreferrer">
-                    Get Started & Claim £2.50 Bonus
-                    <span class="btn-arrow">→</span>
-                </a>
-                <p class="hero-note">No hidden fees • £10 minimum payout • UK only • <span class="bonus-highlight">£2.50 sign-up bonus</span></p>
-                <a href="https://joincustard.co.uk/account/register?referral=2638bb71-4f37-4a54-a7b3-61e5b221c7fe&utm_source=referral&utm_medium=affiliate" class="hero-secondary-cta" target="_blank" rel="noopener noreferrer">Start earning money on Custard UK</a>
-            </div>
-            <!-- QR Code Section -->
-            <div class="qr-section">
-                <img src="qr.png" alt="Custard QR code - Scan to join and get paid for playing games, surveys and free trials in the UK. Sign up link for GPT rewards site with fast 48 hour payouts" class="qr-image">
-                <p class="qr-text">Scan to join & claim your £2.50 bonus</p>
-            </div>
-            <div class="trust-badges">
-                <div class="trust-badge">
-                    <span class="trust-icon">🛡️</span>
-                    <span>Secure Payments</span>
-                </div>
-                <div class="trust-badge">
-                    <span class="trust-icon">⚡</span>
-                    <span>48hr Payouts</span>
-                </div>
-                <div class="trust-badge">
-                    <span class="trust-icon">✓</span>
-                    <span>Verified Reviews</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- How It Works Section -->
-    <section id="how-it-works" class="how-it-works">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">How It Works</h2>
-                <p class="section-subtitle">Start earning in just 3 simple steps</p>
-            </div>
-            <div class="steps-grid">
-                <div class="step-card" aria-label="Step 1: Sign up free to join Custard GPT site UK. Create your free account in minutes and start earning money from games, surveys and offers. No fees to sign up.">
-                    <div class="step-number">1</div>
-                    <div class="step-icon-wrapper">
-                        <span class="step-icon">👤</span>
-                    </div>
-                    <h3 class="step-title">Sign Up Free</h3>
-                    <p class="step-description">Create your free account in minutes. Just enter your details and you're ready to start earning.</p>
-                    <span class="sr-only">Sign up free on Custard UK - the get paid to site where you can earn money by playing games, taking surveys and completing offers. No hidden fees, instant registration.</span>
-                </div>
-                <div class="step-connector">
-                    <span class="connector-arrow">→</span>
-                </div>
-                <div class="step-card" aria-label="Step 2: Complete paid tasks on Custard. Play games for money, take paid surveys, test new apps and earn cashback. Multiple ways to earn on GPT rewards site.">
-                    <div class="step-number">2</div>
-                    <div class="step-icon-wrapper">
-                        <span class="step-icon">🎯</span>
-                    </div>
-                    <h3 class="step-title">Complete Tasks</h3>
-                    <p class="step-description">Play exciting games, take quick surveys, test new apps, and unlock cashback offers.</p>
-                    <span class="sr-only">Complete paid tasks on Custard - earn money playing games like Monopoly GO, complete opinion surveys, test mobile apps and unlock cashback offers. Get paid for things you do anyway.</span>
-                </div>
-                <div class="step-connector">
-                    <span class="connector-arrow">→</span>
-                </div>
-                <div class="step-card" aria-label="Step 3: Get paid fast with Rapid Pay. Cash out within 48 hours on Custard UK. Low £10 minimum payout. One of the fastest paying GPT sites in the UK.">
-                    <div class="step-number">3</div>
-                    <div class="step-icon-wrapper">
-                        <span class="step-icon">💸</span>
-                    </div>
-                    <h3 class="step-title">Get Paid Fast</h3>
-                    <p class="step-description">Cash out with their Rapid Pay feature and receive your money within 48 hours.</p>
-                    <span class="sr-only">Get paid fast with Custard Rapid Pay - receive your earnings within 48 hours. Low £10 minimum payout makes it easy to cash out. One of the fastest paying rewards sites in the UK.</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Features Section -->
-    <section id="features" class="features">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Why Choose Custard?</h2>
-                <p class="section-subtitle">The fastest-paying rewards platform in the UK</p>
-            </div>
-            <div class="features-grid">
-                <div class="feature-card highlight-card" aria-label="Rapid Pay feature - Get paid within 48 hours on Custard UK. One of the fastest paying GPT sites with RapidPay. No waiting weeks for your earnings like other platforms.">
-                    <div class="feature-icon-wrapper">
-                        <span class="feature-icon">⚡</span>
-                    </div>
-                    <h3 class="feature-title">Rapid Payouts</h3>
-                    <p class="feature-description">With their Rapid Pay feature, you can get paid within <strong>48 hours</strong> of completing offers. No waiting weeks like other platforms.</p>
-                    <span class="sr-only">Rapid Pay - Custard offers the fastest payouts in the UK GPT market. Get paid within 48 hours with RapidPay feature. Say goodbye to waiting weeks for your earnings.</span>
-                </div>
-                <div class="feature-card" aria-label="Game testing feature - Get paid to play games on your mobile phone. Earn money testing games like Monopoly GO, Merge Gardens and more. Paid gaming apps with real cash rewards.">
-                    <div class="feature-icon-wrapper">
-                        <span class="feature-icon">🎮</span>
-                    </div>
-                    <h3 class="feature-title">Game Testing</h3>
-                    <p class="feature-description">Play new games before anyone else and get paid for your feedback. Fun way to earn while gaming.</p>
-                    <span class="sr-only">Game testing on Custard - get paid to play popular mobile games including Monopoly GO, Merge Gardens, Goblins Wood and more. Earn up to £277 per offer. Real cash rewards for testing games.</span>
-                </div>
-                <div class="feature-card" aria-label="Quick surveys feature - Earn money taking paid surveys online. Complete opinion surveys and get cash rewards. Short surveys that pay well with £5 bonus for 5 surveys completed.">
-                    <div class="feature-icon-wrapper">
-                        <span class="feature-icon">📊</span>
-                    </div>
-                    <h3 class="feature-title">Quick Surveys</h3>
-                    <p class="feature-description">Share your opinions and earn money for your time. Quick surveys that pay real cash straight to your account.</p>
-                    <span class="sr-only">Quick surveys on Custard - Get paid £1-£5 per survey for sharing your opinions. Survey opportunities with the potential £5 bonus for completing 5 surveys. Easy way to earn money giving feedback.</span>
-                </div>
-                <div class="feature-card" aria-label="Cashback shopping feature - Earn cashback rewards on your everyday shopping. Get cash back on purchases at top UK retailers. Shopping rewards program integrated into Custard platform.">
-                    <div class="feature-icon-wrapper">
-                        <span class="feature-icon">🛍️</span>
-                    </div>
-                    <h3 class="feature-title">Cashback Shopping</h3>
-                    <p class="feature-description">Earn cashback rewards while shopping at your favorite UK retailers. Get paid for purchases you'd make anyway.</p>
-                    <span class="sr-only">Cashback shopping on Custard - Earn money back on everyday shopping with partner retailers. Integrated cashback rewards program with popular UK shops. Get paid for your regular purchases.</span>
-                </div>
-                <div class="feature-card" aria-label="Free trials feature - Get paid to try free trial offers. Complete free trial offers from popular brands and services. Earn money testing premium services with no credit card required.">
-                    <div class="feature-icon-wrapper">
-                        <span class="feature-icon">🎁</span>
-                    </div>
-                    <h3 class="feature-title">Free Trial Offers</h3>
-                    <p class="feature-description">Try new services and products for free while earning money. Risk-free way to test premium offers.</p>
-                    <span class="sr-only">Free trial offers on Custard - Get paid to try free trial versions of popular brands. Complete offers with no credit card required in most cases. Earn money testing premium services risk-free.</span>
-                </div>
-                <div class="feature-card" aria-label="Fast withdrawal feature - Easy money withdrawals with low minimum payout. Withdraw earnings via multiple payment methods. Fast and secure payment processing on Custard rewards platform.">
-                    <div class="feature-icon-wrapper">
-                        <span class="feature-icon">💳</span>
-                    </div>
-                    <h3 class="feature-title">Easy Withdrawal</h3>
-                    <p class="feature-description">Withdraw your earnings easily with multiple payment options. Low £10 minimum makes it quick to cash out.</p>
-                    <span class="sr-only">Easy withdrawal on Custard - Multiple payment methods for cashing out. Low £10 minimum payout threshold. Secure payment processing. Fast and reliable fund transfers.</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section id="faq" class="faq">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Frequently Asked Questions</h2>
-                <p class="section-subtitle">Everything you need to know about earning with Custard</p>
-            </div>
-            <div class="faq-items">
-                <div class="faq-item">
-                    <h3 class="faq-question">Is Custard available in the UK?</h3>
-                    <p class="faq-answer">Yes, Custard is exclusively available to UK residents aged 18 and over.</p>
-                </div>
-                <div class="faq-item">
-                    <h3 class="faq-question">How do I earn money on Custard?</h3>
-                    <p class="faq-answer">You can earn money by playing games, completing paid surveys, trying free trials, and shopping cashback at top UK retailers.</p>
-                </div>
-                <div class="faq-item">
-                    <h3 class="faq-question">How fast does Custard pay out?</h3>
-                    <p class="faq-answer">Custard's Rapid Pay feature pays out within 48 hours, making it one of the fastest paying GPT sites in the UK.</p>
-                </div>
-                <div class="faq-item">
-                    <h3 class="faq-question">What is the minimum payout on Custard?</h3>
-                    <p class="faq-answer">The minimum payout is just £10, one of the lowest thresholds among UK get paid to sites.</p>
-                </div>
-                <div class="faq-item">
-                    <h3 class="faq-question">Is Custard free to join?</h3>
-                    <p class="faq-answer">Yes, signing up is completely free and you receive a £2.50 bonus just for creating your account.</p>
-                </div>
-                <div class="faq-item">
-                    <h3 class="faq-question">What is a GPT site?</h3>
-                    <p class="faq-answer">GPT stands for "Get Paid To" — sites like Custard that pay you to complete tasks like surveys, games, and offers in your spare time.</p>
-                </div>
-                <div class="faq-item">
-                    <h3 class="faq-question">How does Custard compare to other beermoney UK sites?</h3>
-                    <p class="faq-answer">Custard stands out in the UK beermoney scene for its RapidPay feature (48-hour payouts), a UK-exclusive focus meaning more relevant offers, and a £2.50 sign-up bonus. Many users on r/beermoneyuk rate it among the best GPT sites for fast, reliable earnings.</p>
-                </div>
-                <div class="faq-item">
-                    <h3 class="faq-question">How much can I realistically earn on Custard?</h3>
-                    <p class="faq-answer">Earnings vary, but users report making £10–£50+ per month doing surveys and game offers in their spare time. Some game testing offers pay up to £277 per completed offer. Most people reach the £10 cashout threshold within their first week.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section id="reviews" class="testimonials">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">What Users Say</h2>
-                <p class="section-subtitle">Real reviews from real earners</p>
-            </div>
-            <div class="testimonials-grid">
-                <div class="testimonial-card" aria-label="Trustpilot review - User earned £10 quickly by playing games and completing surveys on Custard. Easy payout with £10 minimum compared to other GPT sites like TesterUp.">
-                    <div class="testimonial-rating">★★★★★</div>
-                    <p class="testimonial-text">"I have played games and done a couple of quick surveys and earned £10 very quickly. Pay out was easy at £10 minimum so in comparison to TesterUp where i..."</p>
-                    <div class="testimonial-author">
-                        <span class="author-name">Trustpilot Reviewer</span>
-                        <span class="author-badge">Verified User</span>
-                    </div>
-                    <span class="sr-only">Verified Trustpilot review: User earned £10 quickly by playing games and completing paid surveys on Custard. Easy payout system with £10 minimum threshold. User compares favourably to TesterUp GPT site.</span>
-                </div>
-                <div class="testimonial-card" aria-label="Customer review - One of the best GPT sites with fast payouts and plenty of variety. User loves the games and cashback offers, finds it easy to use.">
-                    <div class="testimonial-rating">★★★★★</div>
-                    <p class="testimonial-text">"One of the best GPT sites I've used. Payouts are fast and there's plenty of variety. Love the games and the cashback offers – easy to use."</p>
-                    <div class="testimonial-author">
-                        <span class="author-name">Review from Make Money Without A Job</span>
-                        <span class="author-badge">Verified User</span>
-                    </div>
-                    <span class="sr-only">Verified customer review: One of the best GPT sites used with fast payouts and variety of earning options. User loves the game testing and cashback offers. Finds the platform easy to navigate and use.</span>
-                </div>
-                <div class="testimonial-card" aria-label="Reddit user review - Prefers Custard over Freecash for easier navigation and better customer support. Payouts are just as good on this UK GPT rewards site.">
-                    <div class="testimonial-rating">★★★★★</div>
-                    <p class="testimonial-text">"The payouts look to be the same as freecash but I much prefer using Custard. Way easier to navigate and also their customer support is really good."</p>
-                    <div class="testimonial-author">
-                        <span class="author-name">Reddit User - r/GetPaidToPlay</span>
-                        <span class="author-badge">Verified User</span>
-                    </div>
-                    <span class="sr-only">Verified Reddit review from GetPaidToPlay community: User prefers Custard over Freecash due to easier navigation and better customer support. Payouts are equally good on this UK rewards site.</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <div class="logo">
-                        <span class="logo-icon">◆</span>
-                        <span class="logo-text">Custard</span>
-                    </div>
-                    <p class="footer-description">The fastest-paying rewards platform in the UK. Earn money by playing games, taking surveys, and shopping.</p>
-                </div>
-                <div class="footer-links">
-                    <h4>Legal</h4>
-                    <a href="#" class="legal-link">Terms & Conditions</a>
-                    <a href="#" class="legal-link">Privacy Info</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p class="copyright">© 2026 Custard Earnings. This is an independent landing page. Not affiliated with joincustard.co.uk.</p>
-                <p class="disclaimer">Results may vary. Individual earnings depend on task availability and completion.</p>
-            </div>
-        </div>
-    </footer>
-</body>
-</html><!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Get Paid to Play Games & Take Surveys | £2.50 Bonus | Custard UK</title>
-
-    <!-- SEO Meta Tags - Keywords -->
-    <meta name="keywords" content="get paid to, GPT sites UK, paid surveys, paid to play games, play games for money, earn money playing games, paid to sign up, free sign up offers, free money offers UK, rewards sites, cashback offers, beermoney UK, side hustle, make money online, paid offers, free trials, get paid to test apps, paid gaming apps, money making apps, survey apps UK, cash rewards, referral program, welcome bonus, instant payout, rapid pay, game testing, paid apps testing, online surveys, extra cash, earn from home, passive income, pocket money, student side hustle">
-
-    <!-- SEO Meta Tags - Description -->
-    <meta name="description" content="Earn real money playing games, taking surveys and shopping cashback in the UK. £2.50 sign-up bonus, £10 minimum payout, get paid within 48 hours. Join Custard free today.">
-
-    <!-- SEO Meta Tags - Robots & Indexing -->
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-    <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-    <meta name="bingbot" content="index, follow, max-image-preview:large">
-
-    <!-- SEO Meta Tags - Author & Publisher -->
-    <meta name="author" content="Custard Earnings">
-    <meta name="publisher" content="Custard Earnings">
-    <meta name="copyright" content="2026 Custard Earnings">
-
-    <!-- SEO Meta Tags - Language & Location -->
-    <meta name="language" content="en-GB">
-    <meta name="geo.region" content="GB">
-    <meta name="geo.country" content="UK">
-    <meta name="distribution" content="UK">
-
-    <!-- SEO Meta Tags - Content Classification -->
-    <meta name="category" content="Money Making, Rewards, GPT Sites">
-    <meta name="rating" content="General">
-    <meta name="referrer" content="unsafe-url">
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://custard-landing-page.vercel.app/">
-    <meta property="og:title" content="Get Paid to Play Games & Take Surveys | £2.50 Bonus | Custard UK">
-    <meta property="og:description" content="Earn real money playing games, taking surveys and shopping cashback in the UK. £2.50 sign-up bonus, £10 minimum payout, get paid within 48 hours. Join Custard free today.">
-    <meta property="og:image" content="qr.png">
-    <meta property="og:site_name" content="Custard Earnings">
-    <meta property="og:locale" content="en_GB">
-
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@custarduk">
-    <meta name="twitter:creator" content="@custarduk">
-    <meta name="twitter:title" content="Get Paid to Play Games & Take Surveys | £2.50 Bonus | Custard UK">
-    <meta name="twitter:description" content="Earn real money playing games, taking surveys and shopping cashback in the UK. £2.50 sign-up bonus, £10 minimum payout, get paid within 48 hours.">
-    <meta name="twitter:image" content="qr.png">
-
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://custard-landing-page.vercel.app/">
-
-    <!-- WebSite / WebPage Structured Data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@graph": [
-            {
-                "@type": "WebSite",
-                "@id": "https://custard-landing-page.vercel.app/#website",
-                "url": "https://custard-landing-page.vercel.app/",
-                "name": "Custard Earnings – Get Paid to Play Games & Take Surveys UK",
-                "description": "Earn real money playing games, taking surveys and shopping cashback in the UK. £2.50 sign-up bonus, £10 minimum payout, get paid within 48 hours.",
-                "inLanguage": "en-GB"
-            },
-            {
-                "@type": "WebPage",
-                "@id": "https://custard-landing-page.vercel.app/#webpage",
-                "url": "https://custard-landing-page.vercel.app/",
-                "name": "Get Paid to Play Games & Take Surveys | £2.50 Bonus | Custard UK",
-                "isPartOf": { "@id": "https://custard-landing-page.vercel.app/#website" },
-                "about": {
-                    "@type": "Thing",
-                    "name": "Custard GPT Site UK",
-                    "description": "Custard is a UK get-paid-to (GPT) rewards platform where users earn money by playing games, taking surveys, trying free trials and shopping cashback."
-                },
-                "breadcrumb": {
-                    "@type": "BreadcrumbList",
-                    "itemListElement": [
-                        {
-                            "@type": "ListItem",
-                            "position": 1,
-                            "name": "Home",
-                            "item": "https://custard-landing-page.vercel.app/"
-                        }
-                    ]
-                },
-                "inLanguage": "en-GB"
-            }
-        ]
-    }
-    </script>
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>◆</text></svg>">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <!-- Header -->
-    <header class="header">
-        <div class="container header-content">
-            <div class="logo">
-                <span class="logo-icon">◆</span>
-                <span class="logo-text">Custard</span>
-            </div>
-            <nav class="nav">
-                <a href="#how-it-works" class="nav-link">How It Works</a>
-                <a href="#features" class="nav-link">Features</a>
-                <a href="#faq" class="nav-link">FAQ</a>
-                <a href="#reviews" class="nav-link">Reviews</a>
+                <a href="#how-it-works" class="nav-link">how it works</a>
+                <a href="#features" class="nav-link">features</a>
+                <a href="#faq" class="nav-link">faq</a>
+                <a href="#reviews" class="nav-link">reviews</a>
             </nav>
             <a href="https://joincustard.co.uk/account/register?referral=2638bb71-4f37-4a54-a7b3-61e5b221c7fe&utm_source=referral&utm_medium=affiliate" class="btn btn-primary header-cta" target="_blank" rel="noopener noreferrer">Get Started</a>
         </div>
@@ -2195,8 +410,8 @@
     <section id="how-it-works" class="how-it-works">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">How It Works</h2>
-                <p class="section-subtitle">Start earning in just 3 simple steps</p>
+                <h2 class="section-title">how it works</h2>
+                <p class="section-subtitle">start earning in just 3 simple steps</p>
             </div>
             <div class="steps-grid">
                 <div class="step-card" aria-label="Step 1: Sign up free to join Custard GPT site UK. Create your free account in minutes and start earning money from games, surveys and offers. No fees to sign up.">
@@ -2242,8 +457,8 @@
     <section id="features" class="features">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Why Choose Custard?</h2>
-                <p class="section-subtitle">The fastest-paying rewards platform in the UK</p>
+                <h2 class="section-title">why choose custard?</h2>
+                <p class="section-subtitle">the fastest-paying rewards platform in the uk</p>
             </div>
             <div class="features-grid">
                 <div class="feature-card highlight-card" aria-label="Rapid Pay feature - Get paid within 48 hours on Custard UK. One of the fastest paying GPT sites with RapidPay. No waiting weeks for your earnings like other platforms.">
@@ -2302,8 +517,8 @@
     <section id="screenshots" class="screenshots">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">See It In Action</h2>
-                <p class="section-subtitle">Real screenshots from the Custard platform</p>
+                <h2 class="section-title">see it in action</h2>
+                <p class="section-subtitle">real screenshots from the custard platform</p>
             </div>
             <div class="screenshots-grid">
                 <div class="screenshot-card">
@@ -2362,7 +577,7 @@
     <section class="cta">
         <div class="container">
             <div class="cta-content">
-                <h2 class="cta-title">Ready to Start Earning?</h2>
+                <h2 class="cta-title">ready to start earning?</h2>
                 <p class="cta-text">Join thousands of users who are already making money with fun, simple tasks. Sign up today, claim your £2.50 bonus, and get paid fast!</p>
                 <a href="https://joincustard.co.uk/account/register?referral=2638bb71-4f37-4a54-a7b3-61e5b221c7fe&utm_source=referral&utm_medium=affiliate" class="btn btn-primary btn-large" target="_blank" rel="noopener noreferrer">
                     Join Now & Get £2.50 Bonus
@@ -2377,8 +592,8 @@
     <section class="comparison">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">How Custard Compares to Other GPT Sites</h2>
-                <p class="section-subtitle">See why Custard is one of the best GPT sites in the UK for earning money from home</p>
+                <h2 class="section-title">how custard compares to other gpt sites</h2>
+                <p class="section-subtitle">see why custard is one of the best gpt sites in the uk for earning money from home</p>
             </div>
             <div class="comparison-table-wrapper">
                 <table class="comparison-table">
@@ -2432,8 +647,8 @@
     <section class="faq">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Frequently Asked Questions</h2>
-                <p class="section-subtitle">Everything you need to know about earning money on Custard</p>
+                <h2 class="section-title">frequently asked questions</h2>
+                <p class="section-subtitle">everything you need to know about earning money on custard</p>
             </div>
             <div class="faq-grid">
                 <div class="faq-item">
@@ -2550,8 +765,8 @@
     <section id="reviews" class="testimonials">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">What Users Say</h2>
-                <p class="section-subtitle">Real reviews from real earners</p>
+                <h2 class="section-title">what users say</h2>
+                <p class="section-subtitle">real reviews from real earners</p>
             </div>
             <div class="testimonials-grid">
                 <div class="testimonial-card" aria-label="Trustpilot review - User earned £10 quickly by playing games and completing surveys on Custard. Easy payout with £10 minimum compared to other GPT sites like TesterUp.">
@@ -2591,15 +806,14 @@
             <div class="footer-content">
                 <div class="footer-brand">
                     <div class="logo">
-                        <span class="logo-icon">◆</span>
-                        <span class="logo-text">Custard</span>
+                        <img src="https://cdn.joincustard.co.uk/static/logo/logo.svg" alt="Custard" class="logo-img">
                     </div>
-                    <p class="footer-description">The fastest-paying rewards platform in the UK. Earn money by playing games, taking surveys, and shopping.</p>
+                    <p class="footer-description">the fastest-paying rewards platform in the uk. earn money by playing games, taking surveys, and shopping.</p>
                 </div>
                 <div class="footer-links">
-                    <h4>Legal</h4>
-                    <a href="#" class="legal-link" data-modal="terms">Terms & Conditions</a>
-                    <a href="#" class="legal-link" data-modal="privacy">Privacy Info</a>
+                    <h4>legal</h4>
+                    <a href="#" class="legal-link" data-modal="terms">terms & conditions</a>
+                    <a href="#" class="legal-link" data-modal="privacy">privacy info</a>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -2633,7 +847,7 @@
     <div id="legal-templates" style="display: none;">
         <!-- Terms Template -->
         <div id="terms-content">
-            <h2>Terms & Conditions</h2>
+            <h2>terms & conditions</h2>
             <div class="legal-section">
                 <h3>About This Page</h3>
                 <p>This is an independent landing page promoting <strong>Custard</strong> (joincustard.co.uk). We are not affiliated with, endorsed by, or connected to Custard or its parent company in any way.</p>
@@ -2675,7 +889,7 @@
         </div>
         <!-- Privacy Template -->
         <div id="privacy-content">
-            <h2>Privacy Information</h2>
+            <h2>privacy information</h2>
             <div class="legal-section">
                 <h3>What We Collect</h3>
                 <p><strong>This landing page does NOT collect, store, or process any personal information.</strong></p>
